@@ -16,6 +16,7 @@
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -285,7 +286,79 @@
             </div>
         </div>
     </section>
+
+    <!-- contact form-->
+     <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">CONTACT US</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="591c353f-455f-4899-ba0a-cafb5bf49407">
+                        <h3 class="mb-4">Send us a Message</h3>
+                    
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Contact Number" pattern="[0-9]{10}" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>
+                        <i class="fas fa-phone me-2"></i> +91 9945169592<br>  &nbsp&nbsp&nbsp&nbsp&nbsp +91 6361048781<br>
+                        <i class="fas fa-envelope me-2"></i> anjanadrifloortechsolutions@gmail.com<br>
+                        <i class="fas fa-map-marker-alt me-2"></i>#51,1st Main, 4th Cross, Lakshmana Nagar, Hegganahalli Cross, Banglore-560091
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="companies.html" class="text-light">associated_companies</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
     
+    <script src="../Javascript/footer.js"></script>
     <script src="../Javascript/navbar.js"></script>
     <script src="../Javascript/index.js"></script>
 </body>
