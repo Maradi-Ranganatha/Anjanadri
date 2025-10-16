@@ -1,0 +1,235 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .services-section {
+            width: 100%;
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .services-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 60px;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .services-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .service-item {
+            margin-bottom: 80px;
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .service-item:nth-child(1) { animation-delay: 0.1s; }
+        .service-item:nth-child(2) { animation-delay: 0.2s; }
+        .service-item:nth-child(3) { animation-delay: 0.3s; }
+        .service-item:nth-child(4) { animation-delay: 0.4s; }
+        .service-item:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-heading {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid #ff6b6b;
+            transition: all 0.3s ease;
+        }
+
+        .service-heading:hover {
+            border-left-color: #4ecdc4;
+            color: #ff6b6b;
+        }
+
+        .service-description {
+            font-size: 1.05rem;
+            color: #636e72;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            height: 250px;
+            background: #f0f0f0;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                gap: 20px;
+            }
+
+            .services-title {
+                font-size: 2.8rem;
+                margin-bottom: 50px;
+            }
+
+            .service-heading {
+                font-size: 1.7rem;
+            }
+
+            .gallery-item {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-title {
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+            }
+
+            .service-heading {
+                font-size: 1.5rem;
+                padding-left: 12px;
+            }
+
+            .service-description {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            .service-item {
+                margin-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .services-section {
+                padding: 20px 0;
+            }
+
+            .services-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+
+            .service-heading {
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+            }
+
+            .service-description {
+                font-size: 0.95rem;
+                padding: 12px;
+                margin-bottom: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .gallery-item {
+                height: 180px;
+            }
+
+            .service-item {
+                margin-bottom: 40px;
+            }
+        }
