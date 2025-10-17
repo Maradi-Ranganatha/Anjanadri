@@ -1,141 +1,159 @@
- .contact-info {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
+/* Prevent horizontal overflow globally */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-        .contact-details {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.contact-info {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x: hidden;
+}
 
-        .contact-details:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
+.contact-details {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .contact-details h3 {
-            color: #2c3e50;
-            font-weight: 700;
-            margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 15px;
-        }
+.contact-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
 
-        .contact-details h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #3498db, #2ecc71);
-            border-radius: 2px;
-        }
+.contact-details h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
 
-        .contact-details .d-flex {
-            align-items: flex-start;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-            cursor: pointer;
-        }
+.contact-details h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 2px;
+}
 
-        .contact-details .d-flex:hover {
-            background: #e9ecef;
-            transform: translateX(10px);
-        }
+.contact-details .d-flex {
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    cursor: pointer;
+}
 
-        .contact-details i {
-            color: #3498db;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(52, 152, 219, 0.1);
-            border-radius: 50%;
-            margin-right: 20px;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
+.contact-details .d-flex:hover {
+    background: #e9ecef;
+    transform: translateX(10px);
+}
 
-        .contact-details .d-flex:hover i {
-            background: rgba(52, 152, 219, 0.2);
-            transform: rotate(360deg);
-        }
+.contact-details i {
+    color: #3498db;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
 
-        .contact-details h5 {
-            color: #34495e;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
+.contact-details .d-flex:hover i {
+    background: rgba(52, 152, 219, 0.2);
+    transform: rotate(360deg);
+}
 
-        .contact-details p {
-            color: #7f8c8d;
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
+.contact-details h5 {
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
 
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
+.contact-details p {
+    color: #7f8c8d;
+    margin-bottom: 0;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 
-        @keyframes slideOut {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .contact-info {
-                padding: 50px 0;
-            }
-            
-            .contact-details {
-                padding: 30px 20px;
-                margin-bottom: 30px;
-            }
-            
-            .contact-details .d-flex {
-                padding: 15px;
-            }
-            
-            .contact-details i {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2em;
-            }
-        }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 50px 15px;
+        overflow-x: hidden;
+    }
+    
+    .contact-details {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-details .d-flex {
+        padding: 15px;
+    }
+    
+    /* Prevent hover transform on mobile */
+    .contact-details .d-flex:hover {
+        transform: translateX(0);
+    }
+    
+    .contact-details i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        margin-right: 15px;
+    }
+}
 
 /* contact form --------------------------------------------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -156,7 +174,7 @@ body {
 /* Animated Background Elements */
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 500px;
     height: 500px;
     background: rgba(255, 255, 255, 0.1);
@@ -165,11 +183,12 @@ body::before {
     right: -250px;
     animation: float 6s ease-in-out infinite;
     z-index: 0;
+    pointer-events: none;
 }
 
 body::after {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 400px;
     background: rgba(255, 255, 255, 0.08);
@@ -178,6 +197,7 @@ body::after {
     left: -200px;
     animation: float 8s ease-in-out infinite reverse;
     z-index: 0;
+    pointer-events: none;
 }
 
 @keyframes float {
@@ -195,11 +215,14 @@ body::after {
     position: relative;
     z-index: 1;
     background-color: #2e5282 !important;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
 }
 
 /* Heading Styles */
@@ -226,6 +249,8 @@ body::after {
 .col-md-8 {
     max-width: 700px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
 }
 
 form {
@@ -237,6 +262,8 @@ form {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease 0.3s forwards;
+    width: 100%;
+    max-width: 100%;
 }
 
 @keyframes fadeInUp {
@@ -258,7 +285,6 @@ form h3 {
 .mb-3 {
     margin-bottom: 1.5rem;
     position: relative;
-    
 }
 
 .form-control {
@@ -272,6 +298,7 @@ form h3 {
     transition: all 0.3s ease;
     outline: none;
     font-family: 'Inter', sans-serif;
+    max-width: 100%;
 }
 
 .form-control:focus {
@@ -463,14 +490,192 @@ textarea.form-control {
     to { opacity: 1; }
 }
 
+/* Map Section Fix */
+.map-section {
+    overflow-x: hidden;
+    padding: 50px 15px;
+}
+
+.map-section .container {
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+.ratio {
+    overflow: hidden;
+}
+
+/* Brochure Section */
+.virat-kohli-reset * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.virat-kohli-wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.ms-dhoni-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.sachin-tendulkar-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.rohit-sharma-title {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.kapil-dev-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.ravi-shastri-preview {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.ravi-shastri-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sourav-ganguly-button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.rahul-dravid-btn {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.yuvraj-singh-view {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.yuvraj-singh-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.harbhajan-singh-download {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.harbhajan-singh-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.rahul-dravid-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.anil-kumble-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.zaheer-khan-detail {
+    text-align: center;
+}
+
+.virender-sehwag-label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.ajinkya-rahane-value {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.hardik-pandya-message {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: none;
+    animation: jasprit-bumrah-slide 0.3s ease;
+}
+
+.hardik-pandya-message.ravindra-jadeja-show {
+    display: block;
+}
+
+@keyframes jasprit-bumrah-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 15px;
+        overflow-x: hidden;
+    }
+
     .contact-section h2 {
         font-size: 2rem;
     }
 
     form {
         padding: 40px 25px;
+        width: 100%;
     }
 
     form h3 {
@@ -487,10 +692,10 @@ textarea.form-control {
         font-size: 1rem;
     }
 
+    /* Hide large background circles on mobile */
     body::before,
     body::after {
-        width: 300px;
-        height: 300px;
+        display: none;
     }
 }
 
@@ -509,6 +714,32 @@ textarea.form-control {
 
     form h3 {
         font-size: 1.3rem;
+    }
+    
+    .contact-details {
+        padding: 20px 15px;
+    }
+    
+    .sachin-tendulkar-card {
+        padding: 20px 15px;
+    }
+    
+    .rohit-sharma-title {
+        font-size: 22px;
+    }
+    
+    .sourav-ganguly-button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .rahul-dravid-btn {
+        width: 100%;
+    }
+    
+    .anil-kumble-info {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 }
 /* brochure------------------------------------------------------------------------------------------------------------*/
