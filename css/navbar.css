@@ -503,7 +503,7 @@ body {
 
 @media (max-width: 480px) {
     .company-name {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .company-tagline {
