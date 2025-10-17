@@ -501,7 +501,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 412px) {
     .company-name {
         font-size: 1rem;
     }
@@ -512,5 +512,65 @@ body {
 
     .logo-img {
         width: 140px;
+    }
+}
+
+/* Extra Small Devices (≤360px) */
+@media (max-width: 361px) {
+    /* Company Header */
+
+    
+    .company-header {
+        height: 65px;
+        max-height: 65px;
+        padding: 8px 4px;
+    }
+
+    .company-name {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    .company-tagline {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+    }
+
+    .logo-img {
+        width: 120px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .nav-menu {
+        top: 60px;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .brochure-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Hamburger icon */
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    /* Decorative circles smaller */
+    .company-header::before,
+    .company-header::after {
+        width: 80px;
+        height: 80px;
     }
 }

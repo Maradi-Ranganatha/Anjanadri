@@ -1,9 +1,15 @@
 /* Services Section - Clientele Marquee */
 /* Reset and Base Styles */
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
 body{
     background-color: rgb(248, 247, 247);
-    
+    position: relative;
 }
 
 
@@ -12,6 +18,8 @@ body{
     background-color: #c4c7cb;
     margin-top: 0;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .marquee-container {
@@ -33,12 +41,14 @@ body{
     overflow: hidden;
     position: relative;
     width: 100%;
+    max-width: 100vw;
 }
 
 .marquee-content {
     display: flex;
     animation: marquee 40s linear infinite;
     width: fit-content;
+    will-change: transform;
 }
 
 .marquee-content:hover {
@@ -104,6 +114,7 @@ body{
     .section-title {
         font-size: 1.5rem;
         margin-bottom: 20px;
+        padding: 0 15px;
     }
 
     .marquee-item {
@@ -120,12 +131,25 @@ body{
     }
 }
 
+@media (max-width: 360px) {
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .marquee-item img {
+        height: 45px;
+        max-width: 100px;
+    }
+}
+
 /* Portfolio Section Styles ------------------------------------------------------------------------------------------------------------------*/
 .portfolio-section {
             position: relative;
             padding: 10px;
             min-height: 100vh;
             overflow: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         .video-background {
@@ -161,6 +185,8 @@ body{
             max-width: 1400px;
             margin: 0 auto;
             padding: 60px 20px;
+            width: 100%;
+            overflow: hidden;
         }
 
         .section-title {
@@ -261,9 +287,10 @@ body{
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
+            width: 100%;
         }
 
         .portfolio-item {
@@ -415,6 +442,7 @@ body{
             .portfolio-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                padding: 0 10px;
             }
 
             .filter-buttons {
@@ -433,6 +461,10 @@ body{
             .portfolio-image {
                 height: 250px;
             }
+            
+            .container {
+                padding: 40px 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -448,7 +480,14 @@ body{
                 padding: 8px 16px;
                 font-size: 0.85rem;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0 5px;
+            }
         }
+        
 .portfolio-grid a {
     text-decoration: none;   /* removes underline */
     color: inherit;          /* keeps original text color */
@@ -457,6 +496,13 @@ body{
 .portfolio-grid a:hover {
     text-decoration: none;   /* ensures no underline on hover too */
 }
+
+/* Ensure all images respect container width */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
 /* contact form -------------------------------------------------------------------------------------------------------------*/
 
 /* Import Modern Font */
@@ -468,17 +514,10 @@ body{
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-}
-
 /* Animated Background Elements */
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 500px;
     height: 500px;
     background: rgba(255, 255, 255, 0.1);
@@ -487,11 +526,12 @@ body::before {
     right: -250px;
     animation: float 6s ease-in-out infinite;
     z-index: 0;
+    pointer-events: none;
 }
 
 body::after {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 400px;
     background: rgba(255, 255, 255, 0.08);
@@ -500,6 +540,7 @@ body::after {
     left: -200px;
     animation: float 8s ease-in-out infinite reverse;
     z-index: 0;
+    pointer-events: none;
 }
 
 @keyframes float {
@@ -517,6 +558,9 @@ body::after {
     position: relative;
     z-index: 1;
     background-color: #2e5282 !important;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .container {
@@ -548,6 +592,8 @@ body::after {
 .col-md-8 {
     max-width: 700px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 form {
@@ -809,16 +855,24 @@ textarea.form-control {
         font-size: 1rem;
     }
 
-    body::before,
-    body::after {
+    body::before {
         width: 300px;
         height: 300px;
+        top: -150px;
+        right: -150px;
+    }
+
+    body::after {
+        width: 250px;
+        height: 250px;
+        bottom: -125px;
+        left: -125px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-section {
-        padding: 40px 15px;
+        padding: 40px 10px;
     }
 
     .contact-section h2 {
@@ -826,10 +880,36 @@ textarea.form-control {
     }
 
     form {
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
 
     form h3 {
         font-size: 1.3rem;
     }
+    
+    body::before {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        right: -100px;
+    }
+
+    body::after {
+        width: 180px;
+        height: 180px;
+        bottom: -90px;
+        left: -90px;
+    }
+}
+
+/* Ensure rows don't overflow */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.contact-section .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
