@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
+            //hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         });
     });
