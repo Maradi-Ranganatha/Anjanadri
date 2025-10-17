@@ -1,6 +1,8 @@
 /* Services Section - Clientele Marquee */
 /* Reset and Base Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -35,6 +37,7 @@ body{
     margin-bottom: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Lora', serif;
 }
 
 .marquee-wrapper {
@@ -189,7 +192,7 @@ body{
             overflow: hidden;
         }
 
-        .section-title {
+        .portfolio-section .section-title {
             text-align: center;
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
@@ -201,6 +204,7 @@ body{
             opacity: 0;
             transform: translateY(-30px);
             animation: fadeInDown 0.8s ease forwards;
+            font-family: 'Lora', serif;
         }
 
         .section-subtitle {
@@ -454,7 +458,7 @@ body{
                 font-size: 0.9rem;
             }
 
-            .section-title {
+            .portfolio-section .section-title {
                 font-size: 2rem;
             }
 
@@ -579,6 +583,7 @@ body::after {
     opacity: 0;
     transform: translateY(-30px);
     animation: fadeInDown 0.8s ease forwards;
+    font-family: 'Lora', serif;
 }
 
 @keyframes fadeInDown {
@@ -620,6 +625,15 @@ form h3 {
     color: #333;
     margin-bottom: 2rem;
     text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.contact-section h2::before {
+    content: '';
+}
+
+.contact-section h2 {
+    font-family: 'Lora', serif;
 }
 
 /* Input Group with Floating Labels */
