@@ -174,9 +174,6 @@ body{
 
         .video-background::after {
             
-  background-color: #0E2F27;
-  color: white;
-
             content: '';
             position: absolute;
             top: 0;
